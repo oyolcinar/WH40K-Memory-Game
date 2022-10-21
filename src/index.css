@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Stencil";
+  src: local("Stencil"), url("./Assets/Fonts/Stencil.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Digital";
+  src: local("Digital"), url("./Assets/Fonts/Digital.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  min-width: 900px;
+}
+
+.header {
+  background-image: url("./Assets/headerTile.jpg");
+  background-size: 500px;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-border {
+  background-image: url("./Assets/metal.jpg");
+  background-size: 8px;
+  height: 0.3rem;
+  width: 100%;
+  box-shadow: 10px 10px #2a2a2a;
+}
+
+.header-logo {
+  font-family: "Stencil";
+  font-size: clamp(10px, 36px, 64px);
+  color: #ddd;
+  min-width: 600px;
+  margin-left: 3rem;
+  letter-spacing: 2px;
+}
+
+.counter {
+  font-family: "Digital";
+  color: #ad0505;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 2rem;
+  width: 200px;
+  min-width: 200px;
+  background-color: #2a2a2a;
+  border: #3b3b3b 2px solid;
+  margin-right: 3rem;
+  border-radius: 5px;
+}
+
+.main-content {
+  background-image: url("./Assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 5.3rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Stencil";
+  color: #ddd;
+  width: 270px;
+  height: 300px;
+  background-image: url("./Assets/metal.jpg");
+  background-size: 400px;
+  border: #dfa402 2px solid;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.card-image{
+  border: #3b3b3b 2px solid;
+  width: 250px;
+  margin-bottom: 5px;
 }
